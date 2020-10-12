@@ -247,4 +247,194 @@ val = today.getTime(); // TimeStamp
 
 birthday.setMonth(2);
 
-console.log(birthday);
+// IF STATEMENTS & COMPARISON OPERATORS
+// if(something){
+//   do something
+// } else {
+//   do something else
+// }
+
+const id = 100;
+
+// equal to value and type
+if(id === 100){
+  console.log('correct');
+} else {
+  console.log('incorrect');
+}
+
+// test if sth is undefined
+if(typeof id !== 'undefined'){
+  console.log(`the id is ${id}`)
+} else {
+  console.log('no id')
+}
+
+// Logical operators
+// AND => &&
+// OR => ||
+
+// TERNARY OPERATOR
+console.log(id === 100 ? 'CORRECT' : 'INCORRECt')
+
+
+// SWITCHES
+const color = 'red';
+
+switch(color){
+  case 'red':
+    console.log('Color is red');
+    break;
+  case 'blue':
+    console.log('Color is blue');
+    break;
+  default:
+    console.log('no red nor blue')
+    break;
+}
+
+// FUNCTIONS DECLARATIONS
+function greet(firstName = 'John'){
+  // console.log('Hello');
+  return 'Hello ' + firstName;
+}
+
+// console.log(greet('Steve'));
+
+// FUNCTIONS EXPRESSIONS
+// const square = function(x){
+//   return x*x
+// }
+
+// console.log(square(8));
+
+// IIMIDIATLY INVOKABLE FUNCTION EXPRESSIONS - IEFEs
+// (function(){
+//   console.log('IEFE Ran...');
+// })()
+
+// (function(name){
+//   console.log('Hello' + name);
+// })('Brad')
+
+// PROPERTY METHODS
+const todo = {
+  add: function(){
+    console.log('Add todo ...');
+  },
+  edit: function(id){
+    console.log(`Edit todo ${id}`)
+  }
+}
+
+todo.delete = function(){
+  console.log('Delete todo...');
+}
+
+todo.add();
+todo.edit(22);
+todo.delete();
+
+
+// LOOPS
+// For
+for(let i = 0; i < 10; i++){
+  if(i === 2){
+    console.log('2 is the best');
+    continue; // go to the next iteration
+  }
+
+  if(i === 5){
+    console.log('Stop the loop');
+    break;
+  }
+
+  console.log('Number ' + i);
+}
+
+// While
+let x = 0;
+
+while(x < 10){
+  console.log('Number ' + x);
+  x++
+}
+
+// Do while => will always run once
+let y = 0
+do {
+  console.log('Number is ' + y);
+  y++;
+}
+
+while(y < 10);
+
+// LOOP THROUGH ARRAT
+const cars = ['Ford', 'Chevy', 'Honda']
+
+// For
+for(let i = 0; i < cars.length; i++){
+  console.log(cars[i]);
+}
+
+// forEach
+cars.forEach(function(car, index){
+  console.log('${car} : ${index}');
+})
+
+// Map
+
+// For in loop
+for(let x in cars){
+  console.log()
+}
+
+// WINDOW METHODS / OJECTS / PROPERTIES
+// Alert
+// alert('Hello World');
+
+// // Prompt
+// const input = prompt();
+// alert(input);
+
+// // Confirm
+// if(confirm('Are you sure?')){
+//   console.log('Yes');
+// } else {
+//   console.log('No');
+// }
+
+// Heigth & Width
+val = window.outerHeight;
+val = window.outerWidth;
+
+val = window.innerHeight;
+val = window.innerWidth;
+
+// Scroll points
+val = window.scrollY; // vertical axe
+val = window.scrollX; // horizontal axe
+
+// Location Object
+val = window.location;
+val = window.location.pathname;
+
+// Redirect
+// window.location.href = "http://google.com";
+
+// Reload
+// window.location.reload();
+
+// History object => browsing history
+// window.history.go(-1);
+val = window.history.length;
+
+// Navigator Object
+val = window.navigator;
+val = window.navigator.language;
+
+console.log(val);
+
+// Global scope
+// let & const have a block level scope
+//
